@@ -1,8 +1,8 @@
 <launch>
    <node pkg="swiftnav_ros" type="swiftnav_ros_node" name="swiftnav_ros_node" output="screen">
-     <param name="port" value="/dev/ttyUSB0" />
+     <param name="port" value="/dev/ttyACM0" />
    </node>
-   
+
    <node pkg="diagnostic_aggregator" type="aggregator_node" name="diagnostic_aggregator" >
       <rosparam command="delete" param="/diagnostic_aggregator" />
       <rosparam command="load" file="$(find swiftnav_ros)/config/swiftnav_ros_diag.yaml" />
